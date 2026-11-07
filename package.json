@@ -1,18 +1,15 @@
 {
   "name": "crmprotoredrat",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Selvar CRM",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
+    "build": "node build.js",
     "start": "node server.js",
-    "dev": "node server.js",
-    "vite": "vite --host --port 3000"
+    "dev": "node server.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "type": "module",
-  "devDependencies": {
-    "vite": "^8.3.6"
-  }
+  "license": "ISC"
 }
