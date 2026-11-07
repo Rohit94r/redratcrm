@@ -1,15 +1,22 @@
 {
   "name": "crmprotoredrat",
   "version": "1.0.0",
-  "description": "Selvar CRM",
-  "main": "server.js",
+  "description": "Nexus CRM - Real Estate CRM",
   "type": "module",
   "scripts": {
-    "build": "node build.js",
-    "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "gsap": "^3.14.2",
+    "lucide-react": "^1.16.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.0",
+    "vite": "^8.3.6"
+  }
 }

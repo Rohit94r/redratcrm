@@ -1,54 +1,26 @@
-<!doctype html>
-<!-- Selvar — the revenue desk of a commercial solar company — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. -->
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-<meta name="robots" content="noindex, nofollow">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Selvar — the revenue desk of a commercial solar company</title>
-  <meta name="description" content="Selvar is the sales desk of Brightfold Solar: a quarter-to-quota runway, an AI copilot that flags risks and openings, a pipeline board you drag deals across, a forecast, lead scoring you can re-weight, a calendar, contacts, reports, team quotas, settings and help — light and dark, fully animated." />
-  <meta name="theme-color" content="#eceef2" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Selvar — the revenue desk of a commercial solar company" />
-  <meta property="og:description" content="Quota runway, AI copilot, a drag-and-drop pipeline, forecast and lead scoring for a team selling solar to businesses." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400..700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus CRM — Real Estate CRM</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script>
-    /* Before first paint: the saved theme and sidebar rail, so a reload never
-       flashes the wrong colours or the wide sidebar. Under ?record the page
-       waits for the rig and ignores saved choices. */
-    (function (d) {
-      d.classList.add('js');
-      var rec = /[?&]record\b/.test(location.search);
-      if (rec) d.classList.add('is-record');
-      try {
-        if (!rec) {
-          var t = JSON.parse(localStorage.getItem('selvar:theme') || '"light"');
-          d.dataset.theme = t === 'system' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : t;
-          if (localStorage.getItem('selvar:rail') === '1') d.classList.add('is-rail');
-        }
-      } catch (e) {}
-      /* 761–1279px: the sidebar is an icon rail automatically */
-      var nq = matchMedia('(max-width: 1279px) and (min-width: 761px)');
-      d.classList.toggle('is-narrow', nq.matches);
-      nq.addEventListener('change', function () { d.classList.toggle('is-narrow', nq.matches); window.dispatchEvent(new Event('railchange')); });
-      if (!rec) setTimeout(function () { d.classList.add('failsafe'); }, 4000);
-    })(document.documentElement);
+    // Restore theme preference before first paint
+    (function() {
+      var t = localStorage.getItem('nexus-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', t);
+      var r = localStorage.getItem('nexus-rail');
+      if (r === 'true') document.documentElement.classList.add('is-rail');
+      document.documentElement.classList.add('js');
+    })();
   </script>
-  <script type="module" crossorigin src="./assets/index-D34BrEek.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/actions-C3Wl-txy.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-B1ZLVFwE.css">
-<link rel="icon" href="/favicon.ico" sizes="48x48">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
   <div id="root"></div>
-  <noscript><p style="padding:24px">Selvar needs JavaScript to run.</p></noscript>
-
-
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
